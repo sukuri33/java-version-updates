@@ -17,13 +17,16 @@ public class TestApple {
 //        System.out.println(filterApples(appleInventory,new AppleGreenColorPredicate()));
 //        System.out.println(filterApples(appleInventory,new AppleHeavyPredicate()));
 
-        ApplePredicate abc = p -> p.getWeight() > 200;
+        ApplePredicate abc = p1 -> p1.getWeight() < 200;
         System.out.println(filterApples(appleInventory,abc));
+
+        ApplePredicateString xyz = p -> p.getColor().toString();
+        System.out.println(xyz.test(appleInventory.get(0)));
 
 
     }
 
-    private static<T> List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate){
+    private static List<Apple> filterApples(List<Apple> inventory, ApplePredicate applePredicate){
 
         List<Apple> result = new ArrayList<>();
 
