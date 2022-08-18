@@ -1,4 +1,4 @@
-package com.learncomparatorinterface;
+package com.learncomparatorinterface.comparetorInterface;
 
 import java.util.Comparator;
 

@@ -1,4 +1,6 @@
-package com.learncomparatorinterface;
+package com.learncomparatorinterface.comparetorInterface;
+
+import com.learncomparatorinterface.comparetorInterface.CustomComparator;
 
 import java.util.Arrays;
 import java.util.Collections;
