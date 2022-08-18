@@ -18,6 +18,11 @@ public class TestApplePredicateTask {
 //        prettyPrintApple(appleInventory,new LightOrHeavyApplePredicate());
 //        prettyPrintApple(appleInventory,new WeightedApplePredicate());
 
+        ApplePredicateTask abc1 = p -> {
+          String ch = p.getWeight() < 150 ? "Heavy" : "Light";
+            return "A"+ch+" "+p.getColor()+" apple";
+        };
+
         ApplePredicateTask abc = p -> {
             if (p.getWeight()<150){
                 return "A Light "+p.getColor().toString()+" apple";
