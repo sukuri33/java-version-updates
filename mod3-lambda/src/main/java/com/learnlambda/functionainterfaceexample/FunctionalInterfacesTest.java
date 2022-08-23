@@ -6,7 +6,11 @@ import com.learnlambda.withoutlambdaexamples.BehaviorPrapamExample.ApplePredicat
 import java.util.Objects;
 import java.util.function.*;
 
-public class FunctionalInterfecesTest {
+/**
+ * From a technical perspective all a lambda is a shortcut to defining an implementation
+ * of a functional interface
+ */
+public class FunctionalInterfacesTest {
     //anonymous class
     ApplePredicate ap = new ApplePredicate() {
         @Override
