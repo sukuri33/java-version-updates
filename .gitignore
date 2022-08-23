@@ -1,4 +1,4 @@
 .idea
-java-version-updates.iml
+*.iml
 out
 target

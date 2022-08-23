@@ -12,7 +12,7 @@
         <module>mod1-generics</module>
         <module>mod3-lambda</module>
         <module>Mod4-double_colon_operators</module>
-        <module>mode5-comparator_interface</module>
+        <module>mod5-comparator_interface</module>
         <module>Mod6-stream</module>
     </modules>
 
