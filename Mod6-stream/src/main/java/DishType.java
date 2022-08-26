@@ -1,4 +1,4 @@
 
-public enum Type {
+public enum DishType {
     MEAT, FISH, OTHER;
 }

@@ -1,3 +1,5 @@
+package com.streamintro;
+
 public class Course {
     
     private String courseName;
