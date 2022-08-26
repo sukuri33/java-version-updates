@@ -18,7 +18,7 @@ public class Main {
         for (CurrencyEnum currency : currencies) {
             System.out.println(currency);
         }
-
+    
         //How to use switch-case with enums?
         switch (CurrencyEnum.DIME){
             case PENNY:

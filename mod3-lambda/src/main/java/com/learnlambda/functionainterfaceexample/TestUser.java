@@ -27,6 +27,21 @@ public class TestUser {
         System.out.println("Print all people whose first name starts with E");
         printUser(userList,i -> i.getName().startsWith("E"));
 
+        Laptop hpLaptop = build(()->{
+            Laptop laptop = new Laptop();
+            laptop.setCPU("I9");
+            laptop.setScreenSize("17");
+            laptop.setOS("Windows 11");
+
+            return laptop;
+        });
+
+        System.out.println(hpLaptop);
+
+    }
+
+    private static Laptop build(LaptopBuilder p) {
+        return p.build();
     }
 
     private static void printUser(List<User> userList, Predicate<User> p) {

@@ -19,6 +19,7 @@ public class CarTest {
         //return type is Car object
         Car honda = c1.apply("Honda",2019);
         System.out.println(honda.getMake());
+        System.out.println(honda.getModel());
 
     }
 }
