@@ -1,4 +1,5 @@
 
+import java.util.Comparator;
 import java.util.List;
 
 public class DishTest {
@@ -19,14 +20,21 @@ public class DishTest {
         System.out.println("********Print three high caloric dish name (>300)************");
         lowCalo400.stream()
                 .filter(d -> d.getCalories() > 300)
-                .forEach(i -> System.out.println(i.getName()));
+                .limit(3)
+                .forEach(i -> System.out.println(i.getName()+" "+i.getCalories()));
         System.out.println();
         System.out.println("*******Print all dish name that are below 400 calories in sorted******");
-        //Print all dish name that are below 400 calories in sorted
+        //Print all the dish names that are below 400 calories in sorted by calories
         lowCalo400.stream()
-                .filter(d -> d.getCalories() < 400)
-                .map(i -> i.getName())
-                .sorted((o1, o2) -> o1.compareTo(o2))
+                .filter(d->d.getCalories() < 400)
+                .sorted(Comparator.comparing(Dish::getCalories))
+                .map(Dish::getName)
                 .forEach(System.out::println);
+
+//        lowCalo400.stream()
+//                .filter(d -> d.getCalories() < 400)
+//                .map(i -> i.getName())
+//                .sorted((o1, o2) -> o1.compareTo(o2))
+//                .forEach(System.out::println);
     }
 }

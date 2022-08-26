@@ -3,6 +3,7 @@ package com.streamintro;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 public class StreamOperations {
@@ -58,5 +59,30 @@ public class StreamOperations {
                 listOfStr.map(eachWord -> eachWord.length())
 //                .filter(i -> i.endsWith("A"))
                  .forEach(i -> System.out.println(i));
+
+
+/**
+ *flatMap() vs map()
+ *
+ * map() : takes Stream<T> as input and returns Stream<R>
+ *
+ * It is mapper function produces single value for each input value. It is called One-To-One mapping.
+ *
+ * flatMap() takes Stream<Stream<T>> as an input and return Stream<R>. It is called One-To-Many mapping
+ *
+ * Stream.of(1,2,3,4)  -> [1,2,3,4]
+ *
+ * [ [1,2], [3,4] , [5,6], [7,8] ] -> [1,2,3,4,5,6,7,8] flatMap()
+ */
+
+    Stream<String> strm1 = Stream.of("Jacky","Maggy","Jocy");
+        Stream<String> strm2 = Stream.of("Alim","Malim","Zalim");
+        Stream<String> strm3 = Stream.of("Oguz","Orkan","Togay");
+    Stream<Stream<String>> flatMapDemo = Stream.of(strm1,strm2,strm3);
+//    flatMapDemo.map(name ->name.collect(Collectors.toList()))
+    flatMapDemo.flatMap(name ->name.collect(Collectors.toList()).stream().filter(i->i.length()>4))
+            .forEach(System.out::println);
+
+
     }
 }
