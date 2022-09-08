@@ -15,6 +15,7 @@
         <module>mod5-comparator_interface</module>
         <module>Mod6-stream</module>
         <module>mod2-enums</module>
+        <module>mod7-optional-bigdecimal</module>
     </modules>
 
     <properties>
